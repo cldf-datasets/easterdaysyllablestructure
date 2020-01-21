@@ -1,101 +1,101 @@
-ID,Name,Macroarea,Latitude,Longitude,Glottocode,ISO639P3code
-1,Qawasqar,,,,,alc
-2,Albanian (Tosk dialect),,,,,als
-3,Alyawarra,,,,,aly
-4,Alamblak,,,,,amp
-5,Atong,,,,,aot
-6,Apinayé,,,,,apn
-7,Apurinã,,,,,apu
-8,Maybrat,,,,,ayz
-9,Bashkir,,,,,bak
-10,Southern Bobo Madaré,,,,,bbo
-11,Bardi,,,,,bcj
-12,Bench,,,,,bcq
-13,Burushaski,,,,,bsk
-14,Chipaya,,,,,cap
-15,Carib,,,,,car
-16,Cavineña,,,,,cav
-17,Choctaw,,,,,cho
-18,Cocopa,,,,,coc
-19,Cocama-Cocamilla,,,,,cod
-20,Cubeo,,,,,cub
-21,Doyayo,,,,,dow
-22,Rukai (Budai dialect),,,,,dru
-23,Darai,,,,,dry
-24,Jola-Fonyi,,,,,dyo
-25,Basque (Central dialect),,,,,eus
-26,Ewe,,,,,ewe
-27,Fur,,,,,fvr
-28,Southern Grebo,,,,,grj
-29,Hadza,,,,,hts
-30,Murui Huitoto,,,,,huu
-31,Sichuan Yi,,,,,iii
-32,Itelmen,,,,,itl
-33,Kalaallisut,,,,,kal
-34,Georgian,,,,,kat
-35,Kadiwéu,,,,,kbc
-36,Kabardian,,,,,kbd
-37,Camsá,,,,,kbh
-38,Grass Koiari,,,,,kbk
-39,Eastern Khanty,,,,,kca
-40,Ket,,,,,ket
-41,East Kewa,,,,,kew
-42,Tukang Besi North,,,,,khc
-43,Kharia,,,,,khr
-44,Kunjen (Oykangand dialect),,,,,kjn
-45,Kamasau,,,,,kms
-46,Kanuri,,,,,knc
-47,Koho (Sre dialect),,,,,kpm
-48,Kambaata,,,,,ktb
-49,Karok,,,,,kyh
-50,Lao,,,,,lao
-51,Lepcha,,,,,lep
-52,Lezgian,,,,,lez
-53,Lakota,,,,,lkt
-54,Lelepa,,,,,lpa
-55,Lunda,,,,,lun
-56,Menya,,,,,mcr
-57,Dizin (Central dialect),,,,,mdx
-58,Ma’di,,,,,mhi
-59,Pinotepa Mixtec,,,,,mio
-60,Tu,,,,,mjg
-61,Kim Mun (Vietnam dialect),,,,,mji
-62,Mohawk,,,,,moh
-63,Mangarrayi,,,,,mpc
-64,Mpade (Makari dialect),,,,,mpi
-65,Maori,,,,,mri
-66,Nimboran,,,,,nir
-67,Nivkh (West Sakhalin dialect),,,,,niv
-68,Sumi Naga,,,,,nsm
-69,Nuu-chah-nulth,,,,,nuk
-70,Tohono O’odham,,,,,ood
-71,Oksapmin,,,,,opm
-72,Pacoh,,,,,pac
-73,Pech,,,,,pay
-74,Yine,,,,,pib
-75,Polish,,,,,pol
-76,Passamaquoddy-Maliseet,,,,,pqm
-77,Paiwan (Saichia dialect),,,,,pwn
-78,Imbabura Highland Quichua,,,,,qvi
-79,Rotokas,,,,,roo
-80,North Slavey (Hare dialect),,,,,scs
-81,Semai,,,,,sea
-82,Tashlhiyt,,,,,shi
-83,Selepet,,,,,spl
-84,Savosavo,,,,,svs
-85,Saaroa,,,,,sxr
-86,Gaam,,,,,tbi
-87,Tehuelche,,,,,teh
-88,Telugu,,,,,tel
-89,Thompson,,,,,thp
-90,Towa,,,,,tow
-91,Tzeltal (Aguacatenango dialect),,,,,tzh
-92,Ngarinyin,,,,,ung
-93,Urarina,,,,,ura
-94,Ute,,,,,ute
-95,Warao,,,,,wba
-96,Mamaindê,,,,,wmd
-97,Wutung,,,,,wut
-98,Yakima Sahaptin,,,,,yak
-99,Yoruba,,,,,yor
-100,Cantonese,,,,,yue
+ID,Name,Macroarea,Latitude,Longitude,Glottocode,ISO639P3code,Source
+1,Qawasqar,South America,-49.303195,-74.707536,qawa1238,alc,Aguilera2001;Clairis1977;Clairis1985;ViegasBarros1990
+2,Albanian (Tosk dialect),Eurasia,41.0,20.0,tosk1239,als,Bevington1974;Klippenstein2010;Newmark1957;NewmarkEtAl1982;Trommer2013
+3,Alyawarra,Australia,-21.0427,136.835,alya1239,aly,Yallop1977
+4,Alamblak,Papunesia,-4.66307,143.316,alam1246,amp,Bruce1984;EdmistonEdmiston2003
+5,Atong,Eurasia,25.346508,90.658722,aton1241,aot,VanBreugel2008
+6,Apinayé,South America,-6.10774,-47.6315,apin1244,apn,BurgessHam1968;Ham2009;CunhadeOliveira2005
+7,Apurinã,South America,-8.21692,-66.7714,apur1254,apu,Facundes2000
+8,Maybrat,Papunesia,-1.3679,132.591,maib1239,ayz,Dol2007
+9,Bashkir,Eurasia,53.5967,56.5594,bash1264,bak,BerksonEtAl2016;Poppe1964
+10,Southern Bobo Madaré,Africa,12.4182,-4.47538,nort2819,bbo,Morse1976;Sanou1978
+11,Bardi,Australia,-16.6274,122.906,bard1255,bcj,Bowern2012
+12,Bench,Africa,7.04682,35.7673,benc1235,bcq,Rapold2006
+13,Burushaski,Eurasia,36.2161,74.8236,buru1296,bsk,Anderson1997;Yoshioka2012
+14,Chipaya,South America,-18.73951,-67.89633,chip1262,cap,CerronPalomino2006;Olson1967
+15,Carib,South America,5.83772,-56.8323,gali1262,car,Courtz2008;Hoff1968;Peasgood1972
+16,Cavineña,South America,-13.3544,-66.6277,cavi1250,cav,Guillaume2008
+17,Choctaw,North America,32.25,-88.5,choc1276,cho,Broadwell2006
+18,Cocopa,North America,32.376,-114.848,coco1261,coc,Bendixen1980;Crawford1966
+19,Cocama-Cocamilla,South America,-4.5,-74.0,coca1259,cod,VallejosYopan2010
+20,Cubeo,South America,1.32382,-70.1939,cube1242,cub,Chacon2012;MorseMaxwell1999
+21,Doyayo,Africa,8.68604,13.0768,doya1240,dow,WieringWiering1994
+22,Rukai (Budai dialect),Papunesia,22.7738,120.844,buda1252,dru,Chen2006
+23,Darai,Eurasia,27.8623,84.1357,dara1250,dry,Dhakal2012;KotapishKotapish1973;Paudyal2003
+24,Jola-Fonyi,Africa,12.75752,-15.7354766667,jola1263,dyo,Lavergne1979;Sapir1965
+25,Basque (Central dialect),Eurasia,43.2787,-1.31622,basq1248,eus,Hualde2003;SaltarelliEtAl1988
+26,Ewe,Africa,6.46061,0.814975,ewee1241,ewe,Ameka1991;Duthie1996;Jalloh2005;Stahlke1971
+27,Fur,Africa,12.0455,23.6401,furr1244,fvr,Jakobi1990;KutschLojengaWaag2004;Noel2008
+28,Southern Grebo,Africa,4.47607,-7.56872,sout2826,grj,Innes1966;Innes1981;Newman1986
+29,Hadza,Africa,-3.83115,35.0458,hadz1240,hts,Sands2013;SandsEtAl1996;TuckerWoodburn1977
+30,Murui Huitoto,South America,-1.13669,-73.8331,muru1274,huu,Wojtylak2017
+31,Sichuan Yi,Eurasia,28.1947,102.121,sich1238,iii,Gerner2013;Maoji1997;Merrifield2012
+32,Itelmen,Eurasia,56.046173,156.30704,itel1242,itl,Bobaljik2006;GeorgVolodin1999;Volodin1976;VolodinZhukova1968
+33,Kalaallisut,North America,69.3761,-52.864,kala1399,kal,Fortescue1984;Hagerup2011;Jacobsen2000
+34,Georgian,Eurasia,41.850397,43.78613,nucl1302,kat,Aronson1990;Aronson1991;Butskhrikidze2002;Chitoran1998;Hewitt1995;JunEtAl2006;ShostedChikovani2006;SkopeteasFery2010;Vicenek2010;Vogt1958
+35,Kadiwéu,South America,-19.7222,-57.582,kadi1248,kbc,Braggio1981;Sandalo1997
+36,Kabardian,Eurasia,43.5082,43.3918,kaba1278,kbd,Applebaum2013;Colarusso2006;GordonApplebaum2010;Kuipers1960;Matasovic2010
+37,Camsá,South America,1.14537,-76.8931,cams1241,kbh,Fabre2002;Howard1967;Howard1972;JuajibioyChindoy1962;MonguiSanchez1981
+38,Grass Koiari,Papunesia,-9.51218,147.437,gras1249,kbk,Dutton1996
+39,Eastern Khanty,Eurasia,62.4308,66.1218,khan1273,kca,Filchenko2007
+40,Ket,Eurasia,63.7551,87.5466,kett1243,ket,Georg2007;Vajda2000
+41,East Kewa,Papunesia,-6.32097,143.73,west2599,kew,Franklin1971;FranklinFranklin1962;FranklinFranklin1978
+42,Tukang Besi North,Papunesia,-5.30994,123.578,tuka1248,khc,Donohue1999
+43,Kharia,Eurasia,22.3571,84.3922,khar1287,khr,Peterson2011
+44,Kunjen (Oykangand dialect),Australia,-16.6807,143.53,oyka1239,kjn,Dixon1970;Sommer1969;Sommer1981
+45,Kamasau,Papunesia,-3.8503,143.842,kama1367,kms,SandersSanders1980
+46,Kanuri,Africa,11.8,13.13,cent2050,knc,Cyffer1998;Hutchison1981
+47,Koho (Sre dialect),Eurasia,11.6444,108.057,sree1244,kpm,LadefogedMaddieson1996;Manley1972;Olsen2014
+48,Kambaata,Africa,7.37582,37.9088,kamb1316,ktb,Treis2008
+49,Karok,North America,41.8228,-123.315,karo1304,kyh,DeAnguloFreeland1931;Bright1957;Sandy2014
+50,Lao,Eurasia,19.0,102.46,laoo1244,lao,Enfield2004;Enfield2007;Erickson2001;MorevEtAl1979
+51,Lepcha,Eurasia,27.0869,88.5726,lepc1244,lep,Plaisier2007;Sprigg1966
+52,Lezgian,Eurasia,41.5157,47.8951,lezg1247,lez,ChitoranBabaliyeva2007;Haspelmath1993;Kodzasov1990;Yu2004
+53,Lakota,North America,46.3699,-103.95,lako1247,lkt,Ingham2003;LakotaLanguageConsortium2008;Mirzayan2010;RoodTaylor1996
+54,Lelepa,Papunesia,-17.6042,168.202,lele1267,lpa,Lacrampe2014
+55,Lunda,Africa,-11.1793,23.8662,lund1266,lun,Kawasha2003
+56,Menya,Papunesia,-7.17425,146.071,meny1245,mcr,Whitehead1992;Whitehead2004
+57,Dizin (Central dialect),Africa,6.1405,35.5763,dizi1235,mdx,Allan1976;Beachy2005;Breeze1988
+58,Ma’di,Africa,3.62499,31.8471,madi1260,mhi,BlackingsFabb2003
+59,Pinotepa Mixtec,North America,16.3043,-97.9966,pino1237,mio,Bradley1970;Costello2014
+60,Tu,Eurasia,36.8177,102.117,tuuu1240,mjg,Slater2003
+61,Kim Mun (Vietnam dialect),Eurasia,22.9856,105.024,kimm1245,mji,Clark2008
+62,Mohawk,North America,43.72,-74.66836,moha1258,moh,Bonvillain1973;Michelson1981;Michelson1988
+63,Mangarrayi,Australia,-14.8,138.5,mang1381,mpc,Merlan1989
+64,Mpade (Makari dialect),Africa,12.4609,14.5833,maka1322,mpi,Allison2012;Mahamat2005
+65,Maori,Papunesia,-38.2881,176.541,maor1246,mri,Bauer1999
+66,Nimboran,Papunesia,-2.5803,140.179,nucl1633,nir,Anceaux1965;May1997;MayMay1981
+67,Nivkh (West Sakhalin dialect),Eurasia,52.59,140.681,gily1242,niv,Gruzdeva1998;Kreinovich1979;Shiraishi2006
+68,Sumi Naga,Eurasia,25.9996,94.4235,sumi1235,nsm,Sreedhar1980;Teo2009;Teo2012
+69,Nuu-chah-nulth,North America,49.67,-126.67,nuuc1236,nuk,CarlsonEtAl2001;Davidson2002;Kim2003;Rose1981;Stonham1999
+70,Tohono O’odham,North America,31.7973,-111.995,toho1245,ood,DoloresMathiot1991;Fitzgerald1994;Hale1959;HillZepeda1992;Saxton1963;Saxton1982
+71,Oksapmin,Papunesia,-5.20797,142.177,oksa1245,opm,Loughnane2009
+72,Pacoh,Eurasia,16.3353,107.094,paco1243,pac,Alves2000;Alves2006;Watson1980
+73,Pech,North America,15.8033,-85.558,pech1241,pay,Holt1986;Holt1999
+74,Yine,South America,-11.1086,-73.3087,yine1238,pib,Hanson2010;Lin1993;Lin1997;Matteson1965;Parker1989;UrquiaSebastianMarlett2008
+75,Polish,Eurasia,51.8439,18.6255,poli1260,pol,Bargieowna1950;Gussmann2007;Jassem2003;Newlinukowicz2012;Nowak2006;Rocawski1976;Rubach1974;Zydorowicz2010
+76,Passamaquoddy-Maliseet,North America,45.494475,-67.40805,male1292,pqm,Leavitt1996;LeSourd1993;Sherwood1986
+77,Paiwan (Saichia dialect),Papunesia,22.3271,120.806,paiw1248,pwn,Chang2006
+78,Imbabura Highland Quichua,South America,0.31776,-78.3729,imba1240,qvi,Carpenter1982;Cole1982;Jake1983
+79,Rotokas,Papunesia,-5.94339,155.154,roto1249,roo,FirchowFirchow1969;FirchowEtAl1973;Robinson2006;Robinson2011
+80,North Slavey (Hare dialect),North America,63.2671,-123.641,nort2942,scs,Rice1989;Rice2005
+81,Semai,Eurasia,4.13257,101.477,sema1266,sea,Dentan2003;Diffloth1976a;Diffloth1976b;Philips2007;Sloan1988
+82,Tashlhiyt,Africa,29.7854,-7.77879,tach1250,shi,Coleman2001;DellElmedlaoui2002;GordonNafi2012;PuechLouali1999;Ridouane2002;Ridouane2007;Ridouane2008;Ridouane2014;RoettgerEtAl2015
+83,Selepet,Papunesia,-6.03532,147.234,sele1250,spl,McElhanon1970
+84,Savosavo,Papunesia,-9.12853,159.814,savo1255,svs,Wegener2008
+85,Saaroa,Papunesia,23.2632,120.711,saar1237,sxr,Pan2012
+86,Gaam,Africa,11.4674,33.9797,gaam1241,tbi,Bender1983;Crewe1975;Stirtz2011
+87,Tehuelche,South America,-47.5796,-68.3235,tehu1242,teh,FernandezGaray1998;FernandezGarayHernandez2006
+88,Telugu,Eurasia,16.4529,78.7024,telu1262,tel,BhaskararaoRay2017;Kelley1963;KosticEtAl1977;Krishnamurti1998;Sailaja1999
+89,Thompson,North America,50.1668,-120.193,thom1243,thp,Koch2008;ThompsonThompson1992;ThompsonThompson1996;ThompsonEtAl1996
+90,Towa,North America,35.5994,-106.766,jeme1245,tow,Bell1993;Yumitani1998
+91,Tzeltal (Aguacatenango dialect),North America,16.6384,-92.2786,tzel1254,tzh,Kaufman1971;Polian2006;Smith2007
+92,Ngarinyin,Australia,-16.4006,126.433,ngar1284,ung,CoateOates1970;Rumsey1978
+93,Urarina,South America,-4.44006,-75.4211,urar1246,ura,Olawsky2006
+94,Ute,North America,40.0965,-110.305,utes1238,ute,Givon2011;Givon2013;Harms1966;Oberly2013
+95,Warao,South America,7.50851,-59.3528,wara1303,wba,Arinterol2000;Osborn1966;RomeroFigeroa1997
+96,Mamaindê,South America,-12.986439,-60.101072,mama1278,wmd,Eberhard2009
+97,Wutung,Papunesia,-2.64636,141.104,wutu1244,wut,Marmion2010
+98,Yakima Sahaptin,North America,46.2655,-120.756,yaki1237,yak,HargusBeavert2002;HargusBeavert2005;HargusBeavert2006;Jansen2010;Minthorn2005;RigsbyRude1996;Rude2009;RudeReservation2014
+99,Yoruba,Africa,7.15345,3.67225,yoru1245,yor,Bamgbose1966;Rowlands1969;Seidl2000;Siertsema1959
+100,Cantonese,Eurasia,23.0,113.0,yuec1235,yue,BauerBenedict1997;MatthewsYip1994

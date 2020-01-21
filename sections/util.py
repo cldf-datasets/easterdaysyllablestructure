@@ -35,7 +35,9 @@ def parse_refs(s, strip=False):
     def repl(m):
         d = m.groupdict()
         pages = d.get('pagesa') or d.get('pagesb') or d.get('pages')
-        refs.add((fix_bibkey(m.group('ref')), (pages.strip() or None) if pages else None))
+        for ref in m.group('ref').split(','):
+            ref = ref.strip()
+            refs.add((fix_bibkey(ref), (pages.strip() or None) if pages else None))
         if strip:
             return ''
         res = m.group('ref')
@@ -89,6 +91,7 @@ class Item(object):
         if self.name.endswith(':'):
             self.name = self.name[:-1].strip()
         if self.name == 'Category':
+            # https://github.com/langsci/249/issues/2
             self.name = 'Complexity category'
         self.value = self.headline.split(']', maxsplit=1)[1].strip()
         if self.lines:

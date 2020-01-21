@@ -17,17 +17,12 @@ class Dataset(BaseDataset):
         return CLDFSpec(module='StructureDataset', dir=self.cldf_dir)
 
     def cmd_download(self, args):
-        """
-        Download files to the raw/ directory. You can use helpers methods of `self.raw_dir`, e.g.
-
-        >>> self.raw_dir.download(url, fname)
-        """
         BASE_URL = 'https://raw.githubusercontent.com/langsci/249/master/'
         self.raw_dir.download(BASE_URL + 'chapters/appendixB.tex', 'data.tex')
         self.raw_dir.download(BASE_URL + 'localbibliography.bib', 'sources.bib')
-        bib = self.raw_dir.read('sources.bib')
         lines = []
         at_line_pattern = re.compile('@(?P<type>[a-z]+){(?P<key>[^,]+),')
+        # Make sure BibTeX keys are ASCII-only:
         for line in self.raw_dir.read('sources.bib').split('\n'):
             m = at_line_pattern.match(line)
             if m:
@@ -36,14 +31,17 @@ class Dataset(BaseDataset):
         self.raw_dir.write('sources.bib', '\n'.join(lines))
 
     def cmd_makecldf(self, args):
-        """
-        Convert the raw data to a CLDF dataset.
-
-        >>> args.writer.objects['LanguageTable'].append(...)
-        """
-        args.writer.cldf.add_component('LanguageTable')
+        args.writer.cldf.add_component(
+            'LanguageTable',
+            {
+                "name": "Source",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                "separator": ";"
+            },
+        )
         args.writer.cldf.add_component(
             'ParameterTable',
+            'Section',
             'datatype',
             {
                 'name': 'multichoice',
@@ -52,6 +50,9 @@ class Dataset(BaseDataset):
             })
         args.writer.cldf.add_component('CodeTable')
         sources = collections.OrderedDict([(e.id, e) for e in self.raw_dir.read_bib()])
+        lname2gc = {
+            l['Name']: l['Glottocode'] for l in self.etc_dir.read_csv('languages.csv', dicts=True)}
+        liso2gl = {l.iso: l for l in args.glottolog.api.languoids() if l.iso}
 
         multichoice = {}
         for n, cls in PARAM_CLASSES.items():
@@ -59,7 +60,9 @@ class Dataset(BaseDataset):
                 args.writer.objects['ParameterTable'].append({
                     'ID': name,
                     'Name': name.replace('_', ' '),
-                    'datatype': 'categorical' if isinstance(datatype, (list, tuple)) or datatype == 'multichoice' else datatype,
+                    'Section': n.replace('_', ' '),
+                    'datatype': 'categorical' if isinstance(datatype, (list, tuple)) or datatype == 'multichoice'
+                    else datatype,
                 })
                 if datatype == 'multichoice':
                     multichoice[name] = set()
@@ -73,33 +76,39 @@ class Dataset(BaseDataset):
 
         phonemes = collections.Counter()
         nval = 0
-        secs = collections.Counter()
         codes = collections.defaultdict(set)
         for i, sec in enumerate(iter_sections(self.raw_dir / 'data.tex'), start=1):
-            print(i, sec)
-            args.writer.objects['LanguageTable'].append({
+            glang = liso2gl[sec.iso]
+            lkw = {
                 'ID': str(i),
                 'Name': sec.name,
                 'ISO639P3code': sec.iso,
-            })
+                'Glottocode': lname2gc.get(sec.name, glang.id),
+                'Latitude': glang.latitude,
+                'Longitude': glang.longitude,
+                'Macroarea': glang.macroareas[0].name,
+                'Source': sec.refs,
+            }
+            args.writer.objects['LanguageTable'].append(lkw)
             args.writer.cldf.add_sources(*[sources[ref] for ref in sec.refs])
             data = {k: {} for k in PARAM_CLASSES}
             for ss in sec.subsections:
-                #print('  {0}'.format(ss.name))
-                secs.update([ss.name])
                 for item in ss.items:
-
                     if sec.iso == 'yue' and item.name == 'N consonant phonemes':
+                        # https://github.com/langsci/249/issues/1
                         item.name = 'C phoneme inventory'
 
-                    if ss.name in data:
+                    if item.attribute == 'Phonetic_correlates_of_stress' and ss.name != 'Suprasegmentals':
+                        # https://github.com/langsci/249/issues/3
+                        assert sec.name == 'Towa'
+                        data['Suprasegmentals'][item.attribute] = item.value
+                    elif ss.name in data:
                         data[ss.name][item.attribute] = item.value
-                    #print('    {0}: {1}'.format(item.name, item.value))
                     if not item.name.startswith('{0}-'.format(sec.iso)):
-                        # There are language-specific parameters -> put in units!
+                        # FIXME: There are language-specific parameters -> put in units!
                         codes[(ss.name, item.name)].add(item.value)
+
             data = {k: PARAM_CLASSES[k](**d) for k, d in data.items()}
-            print(data['Syllable structure'])
             phonemes.update(data['Sound inventory'].C_phoneme_inventory)
             phonemes.update(data['Sound inventory'].V_phoneme_inventory)
 
@@ -117,7 +126,7 @@ class Dataset(BaseDataset):
                                     'ID': str(nval),
                                     'Language_ID': str(i),
                                     'Parameter_ID': name,
-                                    'Value': v,
+                                    'Value': vv,
                                     'Source': format_refs(refs),
                                     'Code_ID': '{0}-{1}'.format(name, slug(vv))
                                 })
@@ -135,32 +144,9 @@ class Dataset(BaseDataset):
                             args.writer.objects['ValueTable'].append(kw)
 
         for name, opts in multichoice.items():
-            print('---', name)
             for opt in sorted(opts):
-                print(opt)
                 args.writer.objects['CodeTable'].append({
                     'ID': '{0}-{1}'.format(name, slug(opt)),
                     'Name': opt,
                     'Parameter_ID': name,
                 })
-
-            #for k, v in data.items():
-            #    print(k)
-            #    print(v)
-
-        #for k, v in sorted(codes.items(), key=lambda i: i[0]):
-            #print(k)
-            #if len(v) > 10:
-            #    print(len(v))
-            #else:
-            #    for vv in sorted(v):
-            #        print('  {0}'.format(vv[:20]))
-
-        #for k, v in phonemes.most_common():
-        #    print(k, v)
-        #print(len(phonemes))
-
-
-
-
-

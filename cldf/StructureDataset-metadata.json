@@ -17,13 +17,13 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "https://github.com/cldf-datasets/easterdaysyllablestructure",
-            "dc:created": "4c66a73"
+            "dc:created": "dea0c62"
         },
         {
             "rdf:type": "prov:Entity",
             "dc:title": "Glottolog",
             "rdf:about": "https://github.com/glottolog/glottolog",
-            "dc:created": "v4.1-18-gd6abf8e"
+            "dc:created": "v4.1"
         }
     ],
     "prov:wasGeneratedBy": [
@@ -44,7 +44,7 @@
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable",
-            "dc:extent": 3410,
+            "dc:extent": 4938,
             "tableSchema": {
                 "columns": [
                     {
@@ -203,6 +203,11 @@
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code",
                         "required": false,
                         "name": "ISO639P3code"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                        "separator": ";",
+                        "name": "Source"
                     }
                 ],
                 "primaryKey": [
@@ -213,7 +218,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterTable",
-            "dc:extent": 31,
+            "dc:extent": 46,
             "tableSchema": {
                 "columns": [
                     {
@@ -239,6 +244,10 @@
                     },
                     {
                         "datatype": "string",
+                        "name": "Section"
+                    },
+                    {
+                        "datatype": "string",
                         "name": "datatype"
                     },
                     {
@@ -258,7 +267,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CodeTable",
-            "dc:extent": 90,
+            "dc:extent": 112,
             "tableSchema": {
                 "columns": [
                     {
