@@ -16,7 +16,23 @@ class Dataset(BaseDataset):
     def cldf_specs(self):  # A dataset must declare all CLDF sets it creates.
         return CLDFSpec(module='StructureDataset', dir=self.cldf_dir)
 
+    def cmd_readme(self, args):
+        lines, title_found = [], False
+        for line in super().cmd_readme(args).split('\n'):
+            lines.append(line)
+            if line.startswith('# ') and not title_found:
+                title_found = True
+                lines.extend([
+                    '',
+                    "[![Build Status](https://travis-ci.org/cldf-datasets/easterdaysyllablestructure.svg?branch=master)]"
+                    "(https://travis-ci.org/cldf-datasets/easterdaysyllablestructure)"
+                ])
+        return '\n'.join(lines)
+
     def cmd_download(self, args):
+        #
+        # We download the TeX source of appendix and bibliography of the LSP book.
+        #
         BASE_URL = 'https://raw.githubusercontent.com/langsci/249/master/'
         self.raw_dir.download(BASE_URL + 'chapters/appendixB.tex', 'data.tex')
         self.raw_dir.download(BASE_URL + 'localbibliography.bib', 'sources.bib')
@@ -31,6 +47,12 @@ class Dataset(BaseDataset):
         self.raw_dir.write('sources.bib', '\n'.join(lines))
 
     def cmd_makecldf(self, args):
+        #
+        # Turning the TeX data into a CLDF dataset is a multistep process:
+        # 1. We split the TeX source into sections, subsections and items.
+        # 2. We convert the text data into structured data, using the `sections` package.
+        # 3. We split the structured data into bits suitable as atomic values of parameters.
+        #
         args.writer.cldf.add_component(
             'LanguageTable',
             {
