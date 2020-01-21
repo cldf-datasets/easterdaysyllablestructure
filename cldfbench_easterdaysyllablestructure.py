@@ -63,6 +63,7 @@ class Dataset(BaseDataset):
                     'Section': n.replace('_', ' '),
                     'datatype': 'categorical' if isinstance(datatype, (list, tuple)) or datatype == 'multichoice'
                     else datatype,
+                    'multichoice': datatype == 'multichoice',
                 })
                 if datatype == 'multichoice':
                     multichoice[name] = set()
@@ -73,14 +74,26 @@ class Dataset(BaseDataset):
                             'Name': opt,
                             'Parameter_ID': name,
                         })
+        process_params = {
+            'Vowel reduction processes': 'R',
+            'Consonant allophony processes': 'C',
+        }
+        process_value_pattern = re.compile('(?P<iso>[a-z]{3})-(?P<pid>[RC])(?P<no>[0-9]+)$')
+        for name, id_ in process_params.items():
+            args.writer.objects['ParameterTable'].append({
+                'ID': id_,
+                'Name': name,
+                'Section': 'Processes',
+                'datatype': 'string',
+                'multichoice': True,
+            })
 
         phonemes = collections.Counter()
         nval = 0
-        codes = collections.defaultdict(set)
-        for i, sec in enumerate(iter_sections(self.raw_dir / 'data.tex'), start=1):
+        for sec in iter_sections(self.raw_dir / 'data.tex'):
             glang = liso2gl[sec.iso]
             lkw = {
-                'ID': str(i),
+                'ID': sec.iso,
                 'Name': sec.name,
                 'ISO639P3code': sec.iso,
                 'Glottocode': lname2gc.get(sec.name, glang.id),
@@ -104,9 +117,18 @@ class Dataset(BaseDataset):
                         data['Suprasegmentals'][item.attribute] = item.value
                     elif ss.name in data:
                         data[ss.name][item.attribute] = item.value
-                    if not item.name.startswith('{0}-'.format(sec.iso)):
-                        # FIXME: There are language-specific parameters -> put in units!
-                        codes[(ss.name, item.name)].add(item.value)
+                    else:
+                        assert process_value_pattern.match(item.name) or item.name == 'Notes'
+                        text, refs = convert_text(item.value, warn_only=True)
+                        nval += 1
+                        args.writer.objects['ValueTable'].append({
+                            'ID': str(nval),
+                            'Language_ID': sec.iso,
+                            'Parameter_ID': process_params[ss.name],
+                            'Value': text,
+                            'Comment': item.name,
+                            'Source': format_refs(refs),
+                        })
 
             data = {k: PARAM_CLASSES[k](**d) for k, d in data.items()}
             phonemes.update(data['Sound inventory'].C_phoneme_inventory)
@@ -124,7 +146,7 @@ class Dataset(BaseDataset):
                                 nval += 1
                                 args.writer.objects['ValueTable'].append({
                                     'ID': str(nval),
-                                    'Language_ID': str(i),
+                                    'Language_ID': sec.iso,
                                     'Parameter_ID': name,
                                     'Value': vv,
                                     'Source': format_refs(refs),
@@ -134,7 +156,7 @@ class Dataset(BaseDataset):
                             nval += 1
                             kw = {
                                 'ID': str(nval),
-                                'Language_ID': str(i),
+                                'Language_ID': sec.iso,
                                 'Parameter_ID': name,
                                 'Value': v,
                                 'Source': format_refs(refs),

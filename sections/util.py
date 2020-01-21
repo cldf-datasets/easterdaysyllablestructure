@@ -56,7 +56,7 @@ def parse_refs(s, strip=False):
     return s, refs
 
 
-def convert_text(s, strip=False):
+def convert_text(s, strip=False, warn_only=False):
     if not s:
         return None
     s, refs = parse_refs(s, strip=strip)
@@ -75,7 +75,10 @@ def convert_text(s, strip=False):
     s = tex_pattern('textsubscript').sub(lambda m: '<sub>' + m.group('text') + '</sub>', s)
     s = tex_pattern('textsuperscript').sub(lambda m: '<sup>' + m.group('text') + '</sup>', s)
     if '\\' in s:
-        raise ValueError(s)
+        if warn_only:
+            print(s)
+        else:
+            raise ValueError(s)
     return s, refs
 
 

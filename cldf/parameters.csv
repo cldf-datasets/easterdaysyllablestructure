@@ -1,47 +1,49 @@
 ID,Name,Description,Section,datatype,multichoice
-Differences_in_phonological_properties_of_stressed_and_unstressed_syllables,Differences in phonological properties of stressed and unstressed syllables,,Suprasegmentals,string,
-Suprasegmentals_notes,Suprasegmentals notes,,Suprasegmentals,string,
-Phonetic_correlates_of_stress,Phonetic correlates of stress,,Suprasegmentals,categorical,
-Phonetic_processes_conditioned_by_stress,Phonetic processes conditioned by stress,,Suprasegmentals,categorical,
-Stress_placement,Stress placement,,Suprasegmentals,categorical,
-Tone,Tone,,Suprasegmentals,categorical,
-Word_stress,Word stress,,Suprasegmentals,categorical,
-Word_stress_comment,Word stress comment,,Suprasegmentals,string,
-Predictability_of_syllabic_consonants,Predictability of syllabic consonants,,Syllable structure,string,
-Size_of_maximal_word_marginal_sequences_with_syllabic_obstruents,Size of maximal word marginal sequences with syllabic obstruents,,Syllable structure,string,
-Complexity_category,Complexity category,,Syllable structure,categorical,
-Onset_obligatory,Onset obligatory,,Syllable structure,categorical,
-Coda_obligatory,Coda obligatory,,Syllable structure,categorical,
-Size_of_maximal_coda,Size of maximal coda,,Syllable structure,integer,
-Size_of_maximal_onset,Size of maximal onset,,Syllable structure,integer,
-Syllabic_consonant_patterns,Syllabic consonant patterns,,Syllable structure,categorical,
-Vocalic_nucleus_patterns,Vocalic nucleus patterns,,Syllable structure,categorical,
-Morphological_constituency_of_maximal_syllable_margin,Morphological constituency of maximal syllable margin,,Syllable structure,string,
-Morphological_pattern_of_syllabic_consonants,Morphological pattern of syllabic consonants,,Syllable structure,string,
-Canonical_syllable_structure,Canonical syllable structure,,Syllable structure,string,
-Coda_restrictions,Coda restrictions,,Syllable structure,string,
-Onset_restrictions,Onset restrictions,,Syllable structure,string,
-Syllable_structure_notes,Syllable structure notes,,Syllable structure,string,
-Synthetic_index,Synthetic index,,Morphology,number,
-Synthetic_index_n_morphemes,Synthetic index n morphemes,,Morphology,integer,
-Synthetic_index_n_words,Synthetic index n words,,Morphology,integer,
-Text,Text,,Morphology,string,
-Other_contrast,Other contrast,,Sound inventory,categorical,
-Other_contrast_amount,Other contrast amount,,Sound inventory,categorical,
-Sound_inventory_notes,Sound inventory notes,,Sound inventory,string,
-N_consonants,N consonants,,Sound inventory,integer,
-N_elaborated_consonants,N elaborated consonants,,Sound inventory,integer,
-N_elaborations,N elaborations,,Sound inventory,integer,
-N_vowel_qualities,N vowel qualities,,Sound inventory,integer,
-Consonant_inventory,Consonant inventory,,Sound inventory,list,
-Vowel_inventory,Vowel inventory,,Sound inventory,list,
-Geminate_inventory,Geminate inventory,,Sound inventory,list,
-Diphtong_inventory,Diphtong inventory,,Sound inventory,list,
-Vowel_sequence_inventory,Vowel sequence inventory,,Sound inventory,list,
-Comment_on_diphthongs_and_vowel_sequences,Comment on diphthongs and vowel sequences,,Sound inventory,string,
-Contrastive_length,Contrastive length,,Sound inventory,categorical,
-Contrastive_nasalization,Contrastive nasalization,,Sound inventory,categorical,
-Place,Place,,Sound inventory,categorical,
-Elaboration,Elaboration,,Sound inventory,categorical,
-Manner,Manner,,Sound inventory,categorical,
-Voicing_contrasts,Voicing contrasts,,Sound inventory,categorical,
+Other_contrast,Other contrast,,Sound inventory,categorical,no
+Other_contrast_amount,Other contrast amount,,Sound inventory,categorical,no
+Sound_inventory_notes,Sound inventory notes,,Sound inventory,string,no
+N_consonants,N consonants,,Sound inventory,integer,no
+N_elaborated_consonants,N elaborated consonants,,Sound inventory,integer,no
+N_elaborations,N elaborations,,Sound inventory,integer,no
+N_vowel_qualities,N vowel qualities,,Sound inventory,integer,no
+Consonant_inventory,Consonant inventory,,Sound inventory,list,no
+Vowel_inventory,Vowel inventory,,Sound inventory,list,no
+Geminate_inventory,Geminate inventory,,Sound inventory,list,no
+Diphtong_inventory,Diphtong inventory,,Sound inventory,list,no
+Vowel_sequence_inventory,Vowel sequence inventory,,Sound inventory,list,no
+Comment_on_diphthongs_and_vowel_sequences,Comment on diphthongs and vowel sequences,,Sound inventory,string,no
+Contrastive_length,Contrastive length,,Sound inventory,categorical,no
+Contrastive_nasalization,Contrastive nasalization,,Sound inventory,categorical,no
+Place,Place,,Sound inventory,categorical,yes
+Elaboration,Elaboration,,Sound inventory,categorical,yes
+Manner,Manner,,Sound inventory,categorical,yes
+Voicing_contrasts,Voicing contrasts,,Sound inventory,categorical,yes
+Predictability_of_syllabic_consonants,Predictability of syllabic consonants,,Syllable structure,string,no
+Size_of_maximal_word_marginal_sequences_with_syllabic_obstruents,Size of maximal word marginal sequences with syllabic obstruents,,Syllable structure,string,no
+Complexity_category,Complexity category,,Syllable structure,categorical,no
+Onset_obligatory,Onset obligatory,,Syllable structure,categorical,no
+Coda_obligatory,Coda obligatory,,Syllable structure,categorical,no
+Size_of_maximal_coda,Size of maximal coda,,Syllable structure,integer,no
+Size_of_maximal_onset,Size of maximal onset,,Syllable structure,integer,no
+Syllabic_consonant_patterns,Syllabic consonant patterns,,Syllable structure,categorical,yes
+Vocalic_nucleus_patterns,Vocalic nucleus patterns,,Syllable structure,categorical,yes
+Morphological_constituency_of_maximal_syllable_margin,Morphological constituency of maximal syllable margin,,Syllable structure,string,no
+Morphological_pattern_of_syllabic_consonants,Morphological pattern of syllabic consonants,,Syllable structure,string,no
+Canonical_syllable_structure,Canonical syllable structure,,Syllable structure,string,no
+Coda_restrictions,Coda restrictions,,Syllable structure,string,no
+Onset_restrictions,Onset restrictions,,Syllable structure,string,no
+Syllable_structure_notes,Syllable structure notes,,Syllable structure,string,no
+Differences_in_phonological_properties_of_stressed_and_unstressed_syllables,Differences in phonological properties of stressed and unstressed syllables,,Suprasegmentals,string,no
+Suprasegmentals_notes,Suprasegmentals notes,,Suprasegmentals,string,no
+Phonetic_correlates_of_stress,Phonetic correlates of stress,,Suprasegmentals,categorical,yes
+Phonetic_processes_conditioned_by_stress,Phonetic processes conditioned by stress,,Suprasegmentals,categorical,yes
+Stress_placement,Stress placement,,Suprasegmentals,categorical,no
+Tone,Tone,,Suprasegmentals,categorical,no
+Word_stress,Word stress,,Suprasegmentals,categorical,no
+Word_stress_comment,Word stress comment,,Suprasegmentals,string,no
+Synthetic_index,Synthetic index,,Morphology,number,no
+Synthetic_index_n_morphemes,Synthetic index n morphemes,,Morphology,integer,no
+Synthetic_index_n_words,Synthetic index n words,,Morphology,integer,no
+Text,Text,,Morphology,string,no
+C,Consonant allophony processes,,Processes,string,yes
+R,Vowel reduction processes,,Processes,string,yes
