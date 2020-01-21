@@ -1,0 +1,101 @@
+ID,Name,Macroarea,Latitude,Longitude,Glottocode,ISO639P3code
+1,Qawasqar,,,,,alc
+2,Albanian (Tosk dialect),,,,,als
+3,Alyawarra,,,,,aly
+4,Alamblak,,,,,amp
+5,Atong,,,,,aot
+6,Apinayé,,,,,apn
+7,Apurinã,,,,,apu
+8,Maybrat,,,,,ayz
+9,Bashkir,,,,,bak
+10,Southern Bobo Madaré,,,,,bbo
+11,Bardi,,,,,bcj
+12,Bench,,,,,bcq
+13,Burushaski,,,,,bsk
+14,Chipaya,,,,,cap
+15,Carib,,,,,car
+16,Cavineña,,,,,cav
+17,Choctaw,,,,,cho
+18,Cocopa,,,,,coc
+19,Cocama-Cocamilla,,,,,cod
+20,Cubeo,,,,,cub
+21,Doyayo,,,,,dow
+22,Rukai (Budai dialect),,,,,dru
+23,Darai,,,,,dry
+24,Jola-Fonyi,,,,,dyo
+25,Basque (Central dialect),,,,,eus
+26,Ewe,,,,,ewe
+27,Fur,,,,,fvr
+28,Southern Grebo,,,,,grj
+29,Hadza,,,,,hts
+30,Murui Huitoto,,,,,huu
+31,Sichuan Yi,,,,,iii
+32,Itelmen,,,,,itl
+33,Kalaallisut,,,,,kal
+34,Georgian,,,,,kat
+35,Kadiwéu,,,,,kbc
+36,Kabardian,,,,,kbd
+37,Camsá,,,,,kbh
+38,Grass Koiari,,,,,kbk
+39,Eastern Khanty,,,,,kca
+40,Ket,,,,,ket
+41,East Kewa,,,,,kew
+42,Tukang Besi North,,,,,khc
+43,Kharia,,,,,khr
+44,Kunjen (Oykangand dialect),,,,,kjn
+45,Kamasau,,,,,kms
+46,Kanuri,,,,,knc
+47,Koho (Sre dialect),,,,,kpm
+48,Kambaata,,,,,ktb
+49,Karok,,,,,kyh
+50,Lao,,,,,lao
+51,Lepcha,,,,,lep
+52,Lezgian,,,,,lez
+53,Lakota,,,,,lkt
+54,Lelepa,,,,,lpa
+55,Lunda,,,,,lun
+56,Menya,,,,,mcr
+57,Dizin (Central dialect),,,,,mdx
+58,Ma’di,,,,,mhi
+59,Pinotepa Mixtec,,,,,mio
+60,Tu,,,,,mjg
+61,Kim Mun (Vietnam dialect),,,,,mji
+62,Mohawk,,,,,moh
+63,Mangarrayi,,,,,mpc
+64,Mpade (Makari dialect),,,,,mpi
+65,Maori,,,,,mri
+66,Nimboran,,,,,nir
+67,Nivkh (West Sakhalin dialect),,,,,niv
+68,Sumi Naga,,,,,nsm
+69,Nuu-chah-nulth,,,,,nuk
+70,Tohono O’odham,,,,,ood
+71,Oksapmin,,,,,opm
+72,Pacoh,,,,,pac
+73,Pech,,,,,pay
+74,Yine,,,,,pib
+75,Polish,,,,,pol
+76,Passamaquoddy-Maliseet,,,,,pqm
+77,Paiwan (Saichia dialect),,,,,pwn
+78,Imbabura Highland Quichua,,,,,qvi
+79,Rotokas,,,,,roo
+80,North Slavey (Hare dialect),,,,,scs
+81,Semai,,,,,sea
+82,Tashlhiyt,,,,,shi
+83,Selepet,,,,,spl
+84,Savosavo,,,,,svs
+85,Saaroa,,,,,sxr
+86,Gaam,,,,,tbi
+87,Tehuelche,,,,,teh
+88,Telugu,,,,,tel
+89,Thompson,,,,,thp
+90,Towa,,,,,tow
+91,Tzeltal (Aguacatenango dialect),,,,,tzh
+92,Ngarinyin,,,,,ung
+93,Urarina,,,,,ura
+94,Ute,,,,,ute
+95,Warao,,,,,wba
+96,Mamaindê,,,,,wmd
+97,Wutung,,,,,wut
+98,Yakima Sahaptin,,,,,yak
+99,Yoruba,,,,,yor
+100,Cantonese,,,,,yue
