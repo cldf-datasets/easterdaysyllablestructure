@@ -9,6 +9,11 @@ from sections.util import *
 from sections import PARAM_CLASSES
 
 
+def code_id(param, code):
+    f = base16 if param.endswith('_inventory') else slug
+    return '{0}-{1}'.format(param, f(code))
+
+
 class Dataset(BaseDataset):
     dir = pathlib.Path(__file__).parent
     id = "easterdaysyllablestructure"
@@ -92,7 +97,7 @@ class Dataset(BaseDataset):
                 if isinstance(datatype, (list, tuple)):
                     for opt in datatype:
                         args.writer.objects['CodeTable'].append({
-                            'ID': '{0}-{1}'.format(name, slug(opt)),
+                            'ID': code_id(name, opt),
                             'Name': opt,
                             'Parameter_ID': name,
                         })
@@ -172,7 +177,7 @@ class Dataset(BaseDataset):
                                     'Parameter_ID': name,
                                     'Value': vv,
                                     'Source': format_refs(refs),
-                                    'Code_ID': '{0}-{1}'.format(name, slug(vv))
+                                    'Code_ID': code_id(name, vv)
                                 })
                         else:
                             nval += 1
@@ -184,13 +189,13 @@ class Dataset(BaseDataset):
                                 'Source': format_refs(refs),
                             }
                             if isinstance(datatype, (list, tuple)):
-                                kw['Code_ID'] = '{0}-{1}'.format(name, slug(v))
+                                kw['Code_ID'] = code_id(name, v)
                             args.writer.objects['ValueTable'].append(kw)
 
         for name, opts in multichoice.items():
             for opt in sorted(opts):
                 args.writer.objects['CodeTable'].append({
-                    'ID': '{0}-{1}'.format(name, slug(opt)),
+                    'ID': code_id(name, opt),
                     'Name': opt,
                     'Parameter_ID': name,
                 })

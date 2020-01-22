@@ -17,7 +17,7 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "https://github.com/cldf-datasets/easterdaysyllablestructure",
-            "dc:created": "c735449"
+            "dc:created": "390fcbd"
         },
         {
             "rdf:type": "prov:Entity",
@@ -44,7 +44,7 @@
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable",
-            "dc:extent": 5421,
+            "dc:extent": 8738,
             "tableSchema": {
                 "columns": [
                     {
@@ -267,7 +267,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CodeTable",
-            "dc:extent": 112,
+            "dc:extent": 714,
             "tableSchema": {
                 "columns": [
                     {

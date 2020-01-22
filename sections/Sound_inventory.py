@@ -130,19 +130,19 @@ class Sound_inventory(object):
             (
                 'N_vowel_qualities', 'integer', lambda i: i.N_vowel_qualities, None),
             (
-                'Consonant_inventory', 'list', lambda i: ' '.join(i.C_phoneme_inventory), None
+                'Consonant_inventory', 'multichoice', lambda i: i.C_phoneme_inventory, None
             ),
             (
-                'Vowel_inventory', 'list', lambda i: ' '.join(i.V_phoneme_inventory), None,
+                'Vowel_inventory', 'multichoice', lambda i: i.V_phoneme_inventory, None,
             ),
             (
-                'Geminate_inventory', 'list', lambda i: ' '.join(i.Geminates) if i.Geminates else None, None
+                'Geminate_inventory', 'multichoice', lambda i: i.Geminates, None
             ),
             (
-                'Diphtong_inventory', 'list', lambda i: ' '.join(i.Diphthongs_or_vowel_sequences[0]), None,
+                'Diphtong_inventory', 'multichoice', lambda i: i.Diphthongs_or_vowel_sequences[0], None,
             ),
             (
-                'Vowel_sequence_inventory', 'list', lambda i: ' '.join(i.Diphthongs_or_vowel_sequences[1]), None,
+                'Vowel_sequence_inventory', 'multichoice', lambda i: i.Diphthongs_or_vowel_sequences[1], None,
             ),
             (
                 'Comment_on_diphthongs_and_vowel_sequences', 'string', lambda i: i.Diphthongs_or_vowel_sequences[2], None,

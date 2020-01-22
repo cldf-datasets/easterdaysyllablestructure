@@ -1,4 +1,16 @@
 ID,Name,Description,Section,datatype,multichoice
+Differences_in_phonological_properties_of_stressed_and_unstressed_syllables,Differences in phonological properties of stressed and unstressed syllables,,Suprasegmentals,string,no
+Suprasegmentals_notes,Suprasegmentals notes,,Suprasegmentals,string,no
+Phonetic_correlates_of_stress,Phonetic correlates of stress,,Suprasegmentals,categorical,yes
+Phonetic_processes_conditioned_by_stress,Phonetic processes conditioned by stress,,Suprasegmentals,categorical,yes
+Stress_placement,Stress placement,,Suprasegmentals,categorical,no
+Tone,Tone,,Suprasegmentals,categorical,no
+Word_stress,Word stress,,Suprasegmentals,categorical,no
+Word_stress_comment,Word stress comment,,Suprasegmentals,string,no
+Synthetic_index,Synthetic index,,Morphology,number,no
+Synthetic_index_n_morphemes,Synthetic index n morphemes,,Morphology,integer,no
+Synthetic_index_n_words,Synthetic index n words,,Morphology,integer,no
+Text,Text,,Morphology,string,no
 Other_contrast,Other contrast,,Sound inventory,categorical,no
 Other_contrast_amount,Other contrast amount,,Sound inventory,categorical,no
 Sound_inventory_notes,Sound inventory notes,,Sound inventory,string,no
@@ -6,11 +18,11 @@ N_consonants,N consonants,,Sound inventory,integer,no
 N_elaborated_consonants,N elaborated consonants,,Sound inventory,integer,no
 N_elaborations,N elaborations,,Sound inventory,integer,no
 N_vowel_qualities,N vowel qualities,,Sound inventory,integer,no
-Consonant_inventory,Consonant inventory,,Sound inventory,list,no
-Vowel_inventory,Vowel inventory,,Sound inventory,list,no
-Geminate_inventory,Geminate inventory,,Sound inventory,list,no
-Diphtong_inventory,Diphtong inventory,,Sound inventory,list,no
-Vowel_sequence_inventory,Vowel sequence inventory,,Sound inventory,list,no
+Consonant_inventory,Consonant inventory,,Sound inventory,categorical,yes
+Vowel_inventory,Vowel inventory,,Sound inventory,categorical,yes
+Geminate_inventory,Geminate inventory,,Sound inventory,categorical,yes
+Diphtong_inventory,Diphtong inventory,,Sound inventory,categorical,yes
+Vowel_sequence_inventory,Vowel sequence inventory,,Sound inventory,categorical,yes
 Comment_on_diphthongs_and_vowel_sequences,Comment on diphthongs and vowel sequences,,Sound inventory,string,no
 Contrastive_length,Contrastive length,,Sound inventory,categorical,no
 Contrastive_nasalization,Contrastive nasalization,,Sound inventory,categorical,no
@@ -33,17 +45,5 @@ Canonical_syllable_structure,Canonical syllable structure,,Syllable structure,st
 Coda_restrictions,Coda restrictions,,Syllable structure,string,no
 Onset_restrictions,Onset restrictions,,Syllable structure,string,no
 Syllable_structure_notes,Syllable structure notes,,Syllable structure,string,no
-Differences_in_phonological_properties_of_stressed_and_unstressed_syllables,Differences in phonological properties of stressed and unstressed syllables,,Suprasegmentals,string,no
-Suprasegmentals_notes,Suprasegmentals notes,,Suprasegmentals,string,no
-Phonetic_correlates_of_stress,Phonetic correlates of stress,,Suprasegmentals,categorical,yes
-Phonetic_processes_conditioned_by_stress,Phonetic processes conditioned by stress,,Suprasegmentals,categorical,yes
-Stress_placement,Stress placement,,Suprasegmentals,categorical,no
-Tone,Tone,,Suprasegmentals,categorical,no
-Word_stress,Word stress,,Suprasegmentals,categorical,no
-Word_stress_comment,Word stress comment,,Suprasegmentals,string,no
-Synthetic_index,Synthetic index,,Morphology,number,no
-Synthetic_index_n_morphemes,Synthetic index n morphemes,,Morphology,integer,no
-Synthetic_index_n_words,Synthetic index n words,,Morphology,integer,no
-Text,Text,,Morphology,string,no
 C,Consonant allophony processes,,Processes,string,yes
 R,Vowel reduction processes,,Processes,string,yes

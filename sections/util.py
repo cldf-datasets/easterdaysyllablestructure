@@ -1,10 +1,16 @@
 import re
+import base64
 
 import attr
 from clldutils.misc import slug
 
 __all__ = [
-    'fix_bibkey', 'parse_refs', 'format_refs', 'convert_text', 'tex_pattern', 'iter_sections']
+    'fix_bibkey', 'parse_refs', 'format_refs', 'convert_text', 'tex_pattern', 'iter_sections',
+    'base16']
+
+
+def base16(s):
+    return base64.b16encode(s.encode('utf8')).decode()
 
 
 def iter_sections(p):
